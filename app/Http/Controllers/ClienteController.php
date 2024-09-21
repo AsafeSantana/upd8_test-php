@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cliente;
 use Illuminate\Http\Request;
 
+
 class ClienteController extends Controller
 {
     public function index()
@@ -19,7 +20,8 @@ class ClienteController extends Controller
             'cpf' => 'required|string|unique:clientes,cpf',
             'data_nascimento' => 'required|date',
             'sexo' => 'required|in:Masculino,Feminino',
-            'cidade_id' => 'required|exists:cidades,id'
+            'cidade_id' => 'required|exists:cidades,id',
+            'endereco' => 'required|string|max:255' // Novo campo
         ]);
     
         $cliente = Cliente::create($validated);
@@ -41,7 +43,8 @@ class ClienteController extends Controller
             'cpf' => 'sometimes|string|unique:clientes,cpf,' . $cliente->id,
             'data_nascimento' => 'sometimes|date',
             'sexo' => 'sometimes|in:Masculino,Feminino',
-            'cidade_id' => 'sometimes|exists:cidades,id'
+            'cidade_id' => 'sometimes|exists:cidades,id',
+            'endereco' => 'sometimes|string|max:255' // Novo campo
         ]);
 
         $cliente->update($validated);
