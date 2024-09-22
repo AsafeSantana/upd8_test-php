@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/clientes', ClienteController::class);
+
+
+
+Route::resource('clientes', ClienteController::class);
 Route::resource('representantes', RepresentanteController::class);
 Route::resource('cidades', CidadeController::class);
