@@ -34,9 +34,9 @@ php artisan serve
 
 ## Agora você pode acessar a aplicação em seu navegador utilizando as seguintes URLs:
 
-- Clientes
-- Representantes
-- Cidades
+- Clientes : http://127.0.0.1:8000/clientes
+- Representantes : http://127.0.0.1:8000/representantes
+- Cidades : http://127.0.0.1:8000/cidades
 
 ## Funcionalidades
 Na aplicação, você poderá:
