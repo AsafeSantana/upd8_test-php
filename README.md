@@ -37,7 +37,7 @@ php artisan serve
 - Clientes
 - Representantes
 - Cidades
-- 
+
 ## Funcionalidades
 Na aplicação, você poderá:
 
